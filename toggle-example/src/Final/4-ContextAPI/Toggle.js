@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import ToggleStatus from "./ToggleStatus";
+import ToggleButton from "./ToggleButton";
 
  const Toggle = () => {  
 
@@ -15,12 +17,15 @@ const handleToggle = () => setToggle ( (prevState) => !prevState);
     );
 };
 
-const ToggleStatus = ({toggle}) => (
-    <p>The status is: {toggle? "ON" : "OFF"} </p> 
-);
 
-const ToggleButton = ({handleToggle}) => (
-    <button onClick={handleToggle}> Toggle </button>
-);
+
+
+// const ToggleStatus = ({toggle}) => (
+//     <p>The status is: {toggle? "ON" : "OFF"} </p> 
+// );
+
+// const ToggleButton = ({handleToggle}) => (
+//     <button onClick={handleToggle}> Toggle </button>
+// );
 
 export default Toggle;

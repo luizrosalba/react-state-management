@@ -6,11 +6,13 @@ import Cart from "../components/Cart";
 import { requestProducts } from "../Actions";
 
 const Ecommerce = () => {
+ 
   const dispatch = useDispatch();
 
   useEffect(() => {
     getProducts();
 
+    /// pega os produtos de um bucket na internet asincrono 
     async function getProducts() {
       try {
         const response = await fetch(
@@ -18,7 +20,8 @@ const Ecommerce = () => {
         );
 
         const products = await response.json();
-
+         /// dispara as actions 
+         /// pega as actions e envia para store
         if (products) dispatch(requestProducts(products));
       } catch (Error) {
         console.log(Error);

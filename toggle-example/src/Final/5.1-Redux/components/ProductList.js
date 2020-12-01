@@ -6,6 +6,7 @@ import { addToCart } from "../Actions";
 const ProductList = () => {
   const dispatch = useDispatch();
 
+  /// busca a product list do state fazemos um destruction nele 
   const products = useSelector(({ productsList }) => productsList);
 
   return (
@@ -30,7 +31,7 @@ const ProductRow = ({ id, name, value, addToCart }) => (
       justifyContent: "space-between",
       alignContent: "center",
       maxWidth: "220px",
-      marginBottom: "5px"
+      marginBottom: "10px"
     }}
   >
     <p style={{ margin: 0 }}>

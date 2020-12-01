@@ -10,9 +10,10 @@ import { ToggleProvider } from "./ToggleContext";
 const App = () => {
   return (
     <div>
+        {/* agora o toggle pode acessar as informações do provider  */}
       <ToggleProvider>
         <Toggle/>
-        <ToggleStatus /> 
+        {/* <ToggleStatus />  */}
       </ToggleProvider>
     </div>
   );

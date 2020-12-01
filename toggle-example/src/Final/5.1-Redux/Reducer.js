@@ -1,5 +1,6 @@
 import { ActionTypes } from "./Actions";
 
+/// o estado inicial é o carrinho e a lista de produtos vazia 
 const initialState = {
   cart: [],
   productsList: []
@@ -10,12 +11,13 @@ const Reducer = (state = initialState, action) => {
     case ActionTypes.REQUEST_PRODUCTS:
       return {
         ...state,
-        productsList: action.payload.products
+        productsList: action.payload.products  
+        /// guarda os produtos na productsList
       };
     case ActionTypes.CHECKOUT:
       return {
         ...state,
-        cart: []
+        cart: [] /// zera o carrinho 
       };
     case ActionTypes.ADD_TO_CART:
       const product = state.productsList.find(

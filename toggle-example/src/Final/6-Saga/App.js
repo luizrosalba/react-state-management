@@ -17,7 +17,9 @@ const composeEnhancers =
 const enhancer = composeEnhancers(applyMiddleware(sagaMiddleware));
 
 const store = createStore(Reducer, enhancer);
-sagaMiddleware.run(Saga);
+/// depois de passar os reducers podemos chamar o applymidware
+/// o saga será colocado antes de cada chamada de action 
+sagaMiddleware.run(Saga); /// inicializa o saga 
 
 const App = () => {
   return (

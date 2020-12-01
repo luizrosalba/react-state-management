@@ -7,7 +7,9 @@ import Reducer from "./Reducer";
 
 const store = createStore(
   Reducer,
+  /// chrome dev-tools , permite navegar entre os estados 
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+
 );
 
 const App = () => {
